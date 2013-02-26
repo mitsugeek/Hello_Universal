@@ -30,6 +30,10 @@ namespace Hello_Universal
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
+			this.btnClickMe.TouchUpInside += (sender, e) => {
+				this.lblOutput.Text = "Clicked @ " +
+					DateTime.Now.ToShortTimeString();
+			};
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
